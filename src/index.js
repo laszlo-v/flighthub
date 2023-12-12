@@ -16,9 +16,7 @@ root.render(
     <BrowserRouter>
       <PriceProvider>
         <DarkmodeProvider>
-          <Elements stripe={stripePromise}>
-            <App />
-          </Elements>
+          <App />
         </DarkmodeProvider>
       </PriceProvider>
     </BrowserRouter>
