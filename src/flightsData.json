@@ -1,0 +1,28 @@
+{
+  "flights": [
+    {
+      "id": 1,
+      "airline": "Airline 1",
+      "departure": "Dublin",
+      "destination": "London",
+      "airportCode": "LHR",
+      "price": 200
+    },
+    {
+      "id": 2,
+      "airline": "Airline 2",
+      "departure": "Dublin",
+      "destination": "Paris",
+      "airportCode": "CDG",
+      "price": 150
+    },
+    {
+      "id": 3,
+      "airline": "Airline 3",
+      "departure": "Dublin",
+      "destination": "Berlin",
+      "airportCode": "BER",
+      "price": 180
+    }
+  ]
+}

@@ -1,0 +1,193 @@
+.container {
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+
+  .success-message {
+    background-color: #fff;
+    color: #d9630e;
+    font-weight: bold;
+    letter-spacing: 0.15rem;
+    width: 20rem;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+    margin-bottom: 5rem;
+    &.dark {
+      color: #022e2c;
+    }
+  }
+  h2 {
+    color: grey;
+    text-align: center;
+    font-size: clamp(1.2rem, 2vw + 0.1rem, 2.2rem);
+    margin-bottom: 5rem;
+  }
+  .payment-wrapper {
+    // overflow-x: hidden;
+    padding: 0 0.5rem;
+    .payment-left {
+      align-self: flex-start;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .results-card {
+        width: 19rem;
+        max-width: 23rem;
+        color: grey;
+        display: flex;
+        font-weight: bold;
+        border: 0.01rem solid grey;
+        padding: 1rem;
+        margin: 1rem auto;
+        flex: 1 1 auto;
+        .card-left,
+        .card-right {
+          text-align: left;
+        }
+        p {
+          padding: 0.5rem 0;
+          &.dark strong {
+            color: rgb(255, 255, 255);
+          }
+          strong {
+            color: black;
+          }
+        }
+
+        .card-middle {
+          width: 100%;
+        }
+        .card-middle img {
+          display: block;
+          width: 50%;
+          height: auto;
+          margin: 1rem auto;
+        }
+
+        .select-button {
+          display: block;
+          color: white;
+          background-color: #d9630e;
+          padding: 0.5rem 1rem;
+          border: none;
+          outline: none;
+          font-weight: bold;
+          width: 7rem;
+          margin: 1rem 0 0 0;
+          border-radius: 0.5rem;
+          cursor: pointer;
+        }
+      }
+      .rest-data {
+        width: 19rem;
+        max-width: 23rem;
+        padding: 1rem 0.5rem;
+        text-align: left;
+
+        .one-way {
+          color: white;
+          letter-spacing: 0.08rem;
+          text-shadow: -1px -1px 0 #d9630e, 1px -1px 0 #d9630e,
+            -1px 1px 0 #d9630e, 1px 1px 0 #d9630e;
+          &.dark {
+            text-shadow: -1px -1px 0 #22ddd3, 1px -1px 0 #22ddd3,
+              -1px 1px 0 #22ddd3, 1px 1px 0 #22ddd3;
+          }
+        }
+        p {
+          color: grey;
+          font-size: clamp(1.2rem, 2vw + 0.2rem, 1.4rem);
+          font-weight: bold;
+          margin: 0.5rem 0rem;
+        }
+      }
+    }
+    .payment-right {
+      align-self: flex-start;
+      width: 19rem;
+      max-width: 23rem;
+      margin: 1rem auto;
+
+      .group {
+        position: relative;
+        margin: 3rem 0;
+        .error-message-wrapper {
+          .error-message {
+            color: orangered;
+            font-weight: bold;
+            margin-top: -0.5rem;
+          }
+        }
+        .form-input {
+          font-size: 1.2rem;
+          padding: 0.5rem;
+          display: block;
+          width: 18rem;
+          max-width: 23rem;
+          margin: 1rem 1rem 1rem 0.1rem;
+
+          &:focus {
+            outline: none;
+          }
+        }
+
+        .form-input-label {
+          font-size: 16px;
+          font-weight: bold;
+          position: absolute;
+          pointer-events: none;
+          letter-spacing: 0.1rem;
+          transition: 300ms ease all;
+          top: -2rem;
+          color: grey;
+        }
+      }
+    }
+    .button-div {
+      background-color: #d9630e;
+      max-width: 100vw;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 1.5rem;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+      &.dark {
+        background-color: #022e2c;
+        border: 0.01rem solid #22ddd3;
+        color: white;
+      }
+    }
+    @media (min-width: 60rem) {
+      width: 90vw;
+      margin: 0 auto 3rem;
+      align-items: center;
+      justify-content: space-between;
+      display: flex;
+      .payment-left {
+        margin-top: 1rem;
+      }
+      .payment-right {
+        margin: 0 0.5rem 0 0;
+      }
+    }
+  }
+}

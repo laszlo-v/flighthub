@@ -1,0 +1,28 @@
+.active-circle,
+.default-circle {
+  color: grey;
+  font-weight: 500;
+  display: inline-block;
+  font-size: clamp(1rem, 2vw + 0.2rem, 1.5rem);
+  width: calc(1.2rem + 2vw);
+  height: calc(1.2rem + 2vw);
+  line-height: calc(1.2rem + 2vw);
+  margin: 0 2.5vw;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.active-circle {
+  color: white;
+  background-color: #d9630e;
+  border: 0.01rem solid #d9630e;
+  &.dark {
+    background-color: #022e2c;
+    border: 0.01rem solid #22ddd3;
+  }
+}
+.default-circle {
+  border: 0.01rem solid grey;
+}

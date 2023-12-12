@@ -1,0 +1,122 @@
+.button-container {
+  display: inline-block;
+  &.book {
+    color: white;
+    background-color: #d9630e;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    width: 8rem;
+    margin: 2rem auto;
+    border-radius: 1rem;
+    cursor: pointer;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    &.dark {
+      background-color: #022e2c;
+      border: 0.01rem solid #22ddd3;
+    }
+  }
+  &.search {
+    width: 8rem;
+    color: white;
+    height: 2rem;
+    margin: 2rem auto;
+    font-size: 1.2rem;
+    background-color: #d90ec4;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    @media (min-width: 48rem) {
+      margin: 0 5rem 0 0;
+      align-self: flex-end;
+    }
+    &.dark {
+      background-color: #1d001a;
+      color: rgb(255, 255, 255);
+      border: 0.01rem solid #22ddd3;
+    }
+  }
+  &.selected {
+    color: white;
+    background-color: #d90ec4;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    width: 7rem;
+    margin: 1rem 0 0 0;
+    &.dark {
+      background-color: #1d001a;
+      color: rgb(255, 255, 255);
+    }
+  }
+  &.next {
+    color: white;
+    background-color: #d9630e;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    width: 10rem;
+    margin: 2rem auto;
+    cursor: pointer;
+    &.dark {
+      background-color: #022e2c;
+      border: 0.01rem solid #22ddd3;
+    }
+  }
+  &.pay {
+    padding: 0.3rem 0.8rem;
+    color: #d9630e;
+    outline: none;
+    border: none;
+    font-size: 1.5rem;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    cursor: pointer;
+    &.dark {
+      color: #022e2c;
+    }
+  }
+  &.add,
+  &.remove {
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.2rem;
+    margin-left: 1rem;
+    cursor: pointer;
+  }
+  &.back-to-homepage {
+    color: white;
+    background-color: #d90ec4;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-radius: 0.5rem;
+    width: 17rem;
+    margin: 1rem 0 0 0;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+    &.dark {
+      background-color: #022e2c;
+      border: 0.01rem solid #22ddd3;
+      color: #22ddd3;
+    }
+  }
+  &.stripe-pay {
+    margin: 2rem auto;
+    color: red;
+    width: 10rem;
+  }
+}

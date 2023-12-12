@@ -1,0 +1,273 @@
+.container {
+  &.dark {
+    background-color: #23272f;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+  }
+  padding-bottom: 2rem;
+  .hero-image {
+    position: relative;
+    height: 50vh;
+    background: url("../../assets/hero-image.webp") center center/cover
+      no-repeat;
+    @media (min-width: 48rem) {
+      height: 70vh;
+    }
+    h2 {
+      color: white;
+      text-align: center;
+      width: 100%;
+      font-size: 2rem;
+      letter-spacing: 0.25rem;
+      font-weight: 500;
+      position: absolute;
+      top: 70%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+    }
+    .hero-image__options {
+      color: white;
+      position: absolute;
+      display: flex;
+      top: 85%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      h3 {
+        border: 0.01rem solid white;
+        padding: 0.1rem 1.5rem;
+        line-height: 2.5rem;
+        font-weight: 400;
+        &:first-child {
+          border: 0.01rem solid #d9630e;
+          &.dark {
+            border: 0.01rem solid #22ddd3;
+          }
+        }
+        &:hover {
+          cursor: pointer;
+          color: #d9630e;
+          letter-spacing: 0.25rem;
+          transition: all 0.5s;
+          -webkit-transition: all 0.5s;
+          -moz-transition: all 0.5s;
+          -ms-transition: all 0.5s;
+          -o-transition: all 0.5s;
+        }
+        transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -ms-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        @media (min-width: 48rem) {
+          padding: 0.1rem 2.8rem;
+        }
+      }
+    }
+  }
+  .circle-container {
+    text-align: center;
+    margin: 2rem;
+  }
+
+  .rounds {
+    text-align: center;
+    margin: 3rem auto;
+    .one-way,
+    .roundtrip {
+      padding: 0.4rem 2rem;
+      font-weight: bold;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    .one-way {
+      color: white;
+      background-color: #d9630e;
+      border: 0.01rem solid #d9630e;
+      &.dark {
+        background-color: #022e2c;
+        border: 0.01rem solid #22ddd3;
+        color: white;
+      }
+    }
+    .roundtrip {
+      border: 0.01rem solid grey;
+      border-left: none;
+      &.dark {
+        color: grey;
+      }
+    }
+  }
+  .from-to-container,
+  .date-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 80vw;
+    max-width: 60rem;
+    margin: 0 auto 2rem;
+
+    .from,
+    .to,
+    .departure,
+    .return {
+      height: 2rem;
+      margin: 2rem;
+    }
+    label,
+    select,
+    input {
+      height: 2.5rem;
+      vertical-align: middle;
+    }
+    label {
+      width: 6rem;
+      display: inline-block;
+      line-height: 2.5rem;
+      text-align: center;
+      color: grey;
+      background-color: #d9d9d9;
+      border: 0.01rem solid grey;
+      font-weight: 500;
+    }
+    select,
+    input {
+      width: 16rem;
+      color: grey;
+      font-weight: bold;
+      padding: 0.2rem 0.5rem 0 0.5rem;
+      outline: none;
+      border: 0.01rem solid grey;
+      cursor: pointer;
+    }
+    .return {
+      display: none;
+    }
+    @media (min-width: 48rem) {
+      flex-direction: row;
+    }
+  }
+  .adults-children {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    max-width: 60rem;
+    margin: 0 auto;
+    .adults,
+    .children {
+      display: flex;
+      flex-direction: column;
+      margin: 2rem 0;
+      padding-left: 2rem;
+      label {
+        color: grey;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+      }
+      input {
+        font-size: clamp(1rem, 2vw + 0.1rem, 1.5rem);
+        color: grey;
+        width: 8rem;
+        height: 2rem;
+        padding-left: 1rem;
+        border: 0.01rem solid grey;
+      }
+    }
+    .show-adults-error,
+    .show-children-error {
+      color: red;
+      visibility: visible;
+      opacity: 1;
+    }
+    .hide-adults-error,
+    .hide-children-error {
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    @media (min-width: 48rem) {
+      flex-direction: row;
+    }
+  }
+  .promo-button-container {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    max-width: 60rem;
+    margin: 0 auto 2rem;
+    padding: 0 2rem;
+    .promo-code {
+      display: flex;
+      flex-direction: column;
+      label {
+        color: grey;
+        font-weight: bold;
+        margin-bottom: 1rem;
+      }
+      input {
+        height: 2rem;
+        max-width: 20rem;
+        outline: none;
+        border: 0.01rem solid grey;
+      }
+    }
+    .showMessage {
+      visibility: visible;
+      margin: 2rem 0 0 -2rem;
+      text-align: center;
+      line-height: 2rem;
+      height: 2rem;
+      color: #d9630e;
+      font-weight: bold;
+      animation: shake 1s ease-in-out;
+      -webkit-animation: shake 1s ease-in-out;
+      animation-delay: 1s;
+      @media (min-width: 48rem) {
+        margin: 0 0 0 -1rem;
+      }
+    }
+    .hideMessage {
+      visibility: hidden;
+    }
+    @keyframes shake {
+      0%,
+      100% {
+        transform: translateX(0);
+      }
+      10%,
+      30%,
+      50%,
+      70%,
+      90% {
+        transform: translateX(-5px);
+      }
+      20%,
+      40%,
+      60%,
+      80% {
+        transform: translateX(5px);
+      }
+    }
+    @media (min-width: 48rem) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+}

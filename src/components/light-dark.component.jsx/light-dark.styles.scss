@@ -1,0 +1,43 @@
+.light-dark {
+  position: fixed;
+  top: 6.5rem;
+  right: 1.5rem;
+  width: 2rem;
+  height: 2rem;
+  background-color: #d9630e;
+  padding: 0.5rem;
+  display: grid;
+  place-content: center;
+  z-index: 3;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+
+  &:hover {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+  }
+  &.dark {
+    background-color: #23272f;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    border: 0.01rem solid #22ddd3;
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}

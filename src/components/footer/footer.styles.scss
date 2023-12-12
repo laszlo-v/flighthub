@@ -1,0 +1,14 @@
+footer {
+  height: 5rem;
+  text-align: center;
+  border-top: 0.01rem solid grey;
+  &.dark {
+    background-color: rgb(27, 27, 27);
+    border: none;
+  }
+  p {
+    line-height: 5rem;
+    font-weight: bold;
+    color: grey;
+  }
+}

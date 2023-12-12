@@ -1,0 +1,136 @@
+.container {
+  .more {
+    color: grey;
+    text-align: center;
+    font-size: clamp(1.2rem, 2vw + 0.1rem, 2.2rem);
+    margin-bottom: 5rem;
+  }
+  .luggage-h3 {
+    text-align: center;
+    @media (min-width: 60rem) {
+      max-width: 50vw;
+      color: grey;
+      margin: 1rem auto;
+      text-align: left;
+    }
+  }
+  .outer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+
+    .luggage {
+      color: grey;
+      padding: 1rem 1.5rem 1rem 0.5rem;
+      border: 0.01rem solid grey;
+      margin: 1rem auto;
+      &:nth-child(2) {
+        margin-top: 2rem;
+      }
+      span {
+        margin-left: 2rem;
+        font-size: 1.2rem;
+      }
+    }
+    .add-remove-luggage {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    h4 {
+      color: grey;
+      font-size: 1.2rem;
+    }
+    input {
+      &[type="checkbox"] {
+        width: 1.5rem;
+        height: 1.5rem;
+        cursor: pointer;
+      }
+    }
+    input.dark:checked {
+      accent-color: #22ddd3;
+    }
+    input:checked {
+      accent-color: #d9630e;
+    }
+    .insurance {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      label {
+        font-size: 1.2rem;
+        color: grey;
+        font-weight: bold;
+      }
+    }
+    .flight-card-total-container {
+      .results-card {
+        max-width: 23rem;
+        color: grey;
+        display: flex;
+        font-weight: bold;
+        border: 0.01rem solid grey;
+        padding: 1rem;
+        margin: 1rem auto;
+        flex: 1 1 auto;
+        .card-left,
+        .card-right {
+          text-align: left;
+        }
+        p {
+          padding: 0.5rem 0;
+          &.dark strong {
+            color: white;
+          }
+          strong {
+            color: black;
+          }
+        }
+        .card-middle {
+          width: 100%;
+        }
+        .card-middle img {
+          display: block;
+          width: 50%;
+          height: auto;
+          margin: 1rem auto;
+        }
+
+        .select-button {
+          display: block;
+          color: white;
+          background-color: #d9630e;
+          padding: 0.5rem 1rem;
+          border: none;
+          outline: none;
+          font-weight: bold;
+          width: 7rem;
+          margin: 1rem 0 0 0;
+          border-radius: 0.5rem;
+          cursor: pointer;
+        }
+      }
+      .price-next {
+        text-align: center;
+        margin: 1rem auto;
+        .total-price {
+          font-size: 2rem;
+          color: grey;
+          font-weight: 500;
+        }
+      }
+    }
+    @media (min-width: 60rem) {
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: flex-start;
+      max-width: 80vw;
+      margin: 1rem auto;
+      .results-card {
+      }
+    }
+  }
+}
