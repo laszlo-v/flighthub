@@ -20,6 +20,7 @@ import Confirmation from "./routes/confirmation/confirmation.component";
             <App />
           </Elements>
 ); --------- You might need to add => npm add @stripe/react-stripe-js@1.8.01 --------------
+* 7) npm add stripe dotenv
  */
 
 const App = () => {

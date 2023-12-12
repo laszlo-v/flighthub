@@ -10,6 +10,7 @@ import Button from "../../components/button/button.component";
 import { DarkmodeContext } from "../../contexts/darkMode.context";
 import LightDark from "../../components/light-dark.component.jsx/light-dark.component";
 import { Formik, Field, Form, ErrorMessage } from "formik";
+import StripePaymentForm from "../../components/stripe-payment-form/stripe-payment-form.component";
 
 import * as Yup from "yup";
 import "./confirmation.styles.scss";
@@ -216,6 +217,7 @@ const Confirmation = () => {
             </Formik>
           </div>
         </div>
+        <StripePaymentForm totalPrice={totalPrice} />
       </div>
     </>
   );

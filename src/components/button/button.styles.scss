@@ -116,7 +116,10 @@
   }
   &.stripe-pay {
     margin: 2rem auto;
-    color: red;
+    padding: 0.5rem 1rem;
+    color: #1d001a;
     width: 10rem;
+    outline: none;
+    border: 0.1rem solid #22ddd3;
   }
 }
