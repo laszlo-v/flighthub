@@ -57,7 +57,7 @@ const StripePaymentForm = ({ totalPrice }) => {
       <p>Card no: 4242 4242 4242 4242</p>
       <p>Expiry date: 10 / 25</p>
       <p>CVC: 424</p>
-      <p>Postal code: 424</p>
+      <p>Postal code: 12345</p>
       <form onSubmit={paymentHandler}>
         <CardElement className="card-element" />
         <Button buttonType="stripePay">
