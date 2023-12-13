@@ -4,8 +4,16 @@
   justify-content: center;
   background-color: white;
   max-width: 25rem;
-  height: 10rem;
-  margin: 1rem auto;
+  margin: 3rem auto 2rem;
   border: 0.01rem solid #22ddd3;
-  padding: 0 0.5rem;
+  padding: 1rem 0.5rem;
+
+  &.dark {
+    background-color: #22ddd3;
+  }
+  p {
+    margin: 1rem auto;
+    color: grey;
+    font-weight: bold;
+  }
 }
