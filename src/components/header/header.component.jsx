@@ -12,11 +12,12 @@ import "./header.styles.scss";
 
 const Header = () => {
   const { currentUser, setCurrentUser } = useContext(UserContext);
-
+  const [firstName, setFirstName] = useState(null);
   const logGoogleUser = async () => {
     const { user } = await signInWithGooglePopup();
     let firstName = user.displayName.split(" ")[0];
-    setCurrentUser(firstName);
+    setCurrentUser(user.displayName);
+    setFirstName(firstName);
     const userDocRef = await createUserDocument(user);
   };
   const { darkmode } = useContext(DarkmodeContext);
@@ -48,8 +49,8 @@ const Header = () => {
           )}
           <h2 className={`${darkmode ? "join dark" : "join"}`}>{`${
             currentUser
-              ? `Hi, ${currentUser}`
-              : currentUser === null
+              ? `Hi, ${firstName}`
+              : currentUser === null || currentUser === ""
               ? "Join Now"
               : ""
           }`}</h2>
