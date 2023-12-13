@@ -42,7 +42,6 @@ const StripePaymentForm = ({ totalPrice }) => {
       alert(paymentResult.error);
     } else {
       if (paymentResult.paymentIntent.status === "succeeded") {
-        alert("Success");
         navigate("/", { replace: true });
       }
     }
