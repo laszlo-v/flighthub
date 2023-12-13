@@ -5,6 +5,7 @@ import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 import { PriceProvider } from "./contexts/priceContext";
 import { DarkmodeProvider } from "./contexts/darkMode.context";
+import { UserProvider } from "./contexts/user.context";
 import reportWebVitals from "./reportWebVitals";
 
 import { Elements } from "@stripe/react-stripe-js";
@@ -17,7 +18,9 @@ root.render(
       <PriceProvider>
         <DarkmodeProvider>
           <Elements stripe={stripePromise}>
-            <App />
+            <UserProvider>
+              <App />
+            </UserProvider>
           </Elements>
         </DarkmodeProvider>
       </PriceProvider>

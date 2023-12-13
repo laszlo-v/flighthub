@@ -2,10 +2,12 @@ import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { DarkmodeContext } from "../../contexts/darkMode.context";
+import { UserContext } from "../../contexts/user.context";
 import Button from "../button/button.component";
 import "./stripe-payment-form.component.scss";
 
 const StripePaymentForm = ({ totalPrice }) => {
+  const { currentUser } = useContext(UserContext);
   const navigate = useNavigate();
   const { darkmode } = useContext(DarkmodeContext);
   const stripe = useStripe();
@@ -34,7 +36,7 @@ const StripePaymentForm = ({ totalPrice }) => {
       payment_method: {
         card: elements.getElement(CardElement),
         billing_details: {
-          name: "Test Name",
+          name: currentUser,
         },
       },
     });
