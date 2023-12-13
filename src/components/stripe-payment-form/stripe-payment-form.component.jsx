@@ -38,13 +38,13 @@ const StripePaymentForm = ({ totalPrice }) => {
         },
       },
     });
-    if (paymentResult.error) {
-      alert(paymentResult.error);
-    } else {
-      if (paymentResult.paymentIntent.status === "succeeded") {
-        navigate("/", { replace: true });
-      }
-    }
+    navigate("/", { replace: true });
+    // if (paymentResult.error) {
+    //   alert(paymentResult.error);
+    // } else {
+    //   if (paymentResult.paymentIntent.status === "succeeded") {
+    //   }
+    // }
   };
 
   return (
