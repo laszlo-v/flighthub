@@ -75,7 +75,7 @@ const MoreOptions = () => {
           <ShowStep number="4" />
         </div>
         <h2 className="more">Additional Options</h2>
-        <h3 className="luggage-h3">Luggages</h3>
+        <h3 className="luggage-h3">Luggage</h3>
 
         {selectedFlight ? (
           <div className="outer">
@@ -85,7 +85,7 @@ const MoreOptions = () => {
                 In Cargo (up to 20kg) - &euro;28 <span>{numLuggage}</span>
               </p>
               <div className="add-remove-luggage">
-                <h4>Luggages</h4>
+                <h4>Luggage</h4>
                 <div>
                   <Button buttonType="add" onClick={handleAddLuggage}>
                     +
@@ -96,7 +96,7 @@ const MoreOptions = () => {
                 </div>
               </div>
               <div className="insurance">
-                <label>Insurance - &euro;55 p/p</label>
+                <label>Insurance - &euro;50 p/p</label>
                 <input
                   className={`${darkmode ? "dark" : ""}`}
                   type="checkbox"
