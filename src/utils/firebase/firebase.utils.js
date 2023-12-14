@@ -1,3 +1,5 @@
+// this is the setup for Google Firestore and Firebase
+
 import {
   getAuth,
   signInWithPopup,

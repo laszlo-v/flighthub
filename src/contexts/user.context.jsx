@@ -1,3 +1,9 @@
+/**
+ *
+ * The current user also could be stored in LS just like the way I store price and darkMode
+ *
+ */
+
 import { createContext, useState, useEffect } from "react";
 
 import {

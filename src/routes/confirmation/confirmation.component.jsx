@@ -8,12 +8,16 @@ import arrow from "../../assets/arrow.png";
 import arrowDark from "../../assets/arrow-dark.png";
 import Button from "../../components/button/button.component";
 import { DarkmodeContext } from "../../contexts/darkMode.context";
-import LightDark from "../../components/light-dark.component.jsx/light-dark.component";
+import LightDark from "../../components/light-dark.component/light-dark.component";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import StripePaymentForm from "../../components/stripe-payment-form/stripe-payment-form.component";
 
 import * as Yup from "yup";
 import "./confirmation.styles.scss";
+
+// I use two forms in this component - one is commented out
+// one for Formik and Yup
+// and one for Stripe - Cardelement
 
 const Confirmation = () => {
   const { totalPrice } = useContext(PriceContext);
@@ -29,6 +33,7 @@ const Confirmation = () => {
 
   let navigate = useNavigate();
   const handleBackToHomepage = () => {
+    // I'm passing an extra object to the use navigate hook to prevent getting back to the payment page with the back arrow key after the form is submitted
     navigate("/", { replace: true });
   };
 

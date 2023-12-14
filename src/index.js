@@ -12,6 +12,7 @@ import { Elements } from "@stripe/react-stripe-js";
 import { stripePromise } from "./stripe/stripe";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+// the app is nested in all the providers - this is how you can access to the price for example in every component.
 root.render(
   <React.StrictMode>
     <BrowserRouter>

@@ -6,7 +6,7 @@ import { DarkmodeContext } from "../../contexts/darkMode.context";
 import ShowStep from "../../components/show-step/show-step.component";
 import flightsData from "../../flightsData.json";
 import Button from "../../components/button/button.component";
-import LightDark from "../../components/light-dark.component.jsx/light-dark.component";
+import LightDark from "../../components/light-dark.component/light-dark.component";
 import "./home.styles.scss";
 
 const Home = () => {
@@ -14,13 +14,14 @@ const Home = () => {
 
   const navigate = useNavigate();
 
+  // creating two arrays
   const departureCities = [
     ...new Set(flightsData.flights.map((flight) => flight.departure)),
   ];
   const destinationCities = [
     ...new Set(flightsData.flights.map((flight) => flight.destination)),
   ];
-
+  // setting up the states
   const [departure, setDeparture] = useState("");
   const [destination, setDestination] = useState("");
   const [selectedDate, setSelectedDate] = useState("");
@@ -30,6 +31,7 @@ const Home = () => {
   const [adultsError, setAdultsError] = useState(false);
   const [childrenError, setChildrenError] = useState(false);
 
+  // creating the handlers
   const handleDepartureChange = (e) => {
     const selectedDeparture = e.target.value;
     setDeparture(selectedDeparture);
@@ -55,6 +57,7 @@ const Home = () => {
     setChildren(enteredChildren);
   };
 
+  // checking if all fields are valid
   const areAllFieldsValid = () => {
     return (
       departure &&
@@ -64,6 +67,7 @@ const Home = () => {
       children !== ""
     );
   };
+  // this hanlder will be passed to the button
   const handleSearch = () => {
     const selectedFlight = flightsData.flights.find(
       (flight) =>
@@ -74,11 +78,13 @@ const Home = () => {
 
     const isValid = areAllFieldsValid() && validatePassengerCounts();
 
+    // if not all fields are valid - return
     if (!isValid) {
       setErrormessage(true);
       return;
     }
 
+    // storing the data in an object - this will be passed to the other component using the navigate hook
     const searchParams = {
       departure,
       destination,
@@ -88,9 +94,11 @@ const Home = () => {
       price,
     };
 
+    // when navigating to the results page - upon button click - passing the state with the object that contains all the data we want to use
     navigate("/results", { state: { searchParams } });
   };
 
+  // making sure that adults can be only 1 and children not more than 4
   const validatePassengerCounts = () => {
     const isValidAdults = parseInt(adults, 10) === 1;
     const isValidChildren = parseInt(children, 10) <= 4;
@@ -101,6 +109,7 @@ const Home = () => {
     return isValidAdults && isValidChildren;
   };
 
+  // excluding past dates
   const today = new Date();
   today.setDate(today.getDate() + 1);
   const minDate = today.toISOString().split("T")[0];
@@ -118,6 +127,7 @@ const Home = () => {
           </div>
         </div>
         <div className="circle-container">
+          {/** the component 4 times to show the active step */}
           <ShowStep number="1" className="active" />
           <ShowStep number="2" />
           <ShowStep number="3" />

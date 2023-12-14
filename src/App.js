@@ -25,6 +25,7 @@ import Confirmation from "./routes/confirmation/confirmation.component";
 
 const App = () => {
   return (
+    // creating the roots - making sure that all the components are nested in the header
     <Routes>
       <Route element={<Header />}>
         <Route index element={<Home />} />

@@ -1,3 +1,4 @@
+// Specific config for Netlify to provide the secret key and to create a payment intent - like an express setup
 require("dotenv").config();
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 

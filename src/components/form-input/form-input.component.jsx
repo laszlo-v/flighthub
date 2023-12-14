@@ -1,5 +1,6 @@
 import "./form-input.styles.scss";
 
+// a generic form input with label and a span for the mandatory flag which is a *
 const FormInput = ({ label, ...otherProps }) => {
   return (
     <div className="group">

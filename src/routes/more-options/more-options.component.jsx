@@ -7,7 +7,7 @@ import ShowStep from "../../components/show-step/show-step.component";
 import Button from "../../components/button/button.component";
 import arrow from "../../assets/arrow.png";
 import arrowDark from "../../assets/arrow-dark.png";
-import LightDark from "../../components/light-dark.component.jsx/light-dark.component";
+import LightDark from "../../components/light-dark.component/light-dark.component";
 
 import "./more-options.styles.scss";
 
@@ -54,6 +54,7 @@ const MoreOptions = () => {
   };
 
   const handleProceed = () => {
+    // this way we pass again all the date we want to use in another component
     navigate("/confirmation", {
       state: {
         selectedFlight: { ...selectedFlight },

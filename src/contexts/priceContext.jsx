@@ -1,5 +1,6 @@
 import { createContext, useState, useEffect } from "react";
 
+// this is the same exact structure as the darkmode context - saving the price is LS
 export const PriceContext = createContext({
   totalPrice: 0,
   setTotalPrice: () => {},

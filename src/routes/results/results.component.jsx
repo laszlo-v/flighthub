@@ -6,7 +6,7 @@ import ShowStep from "../../components/show-step/show-step.component";
 import arrow from "../../assets/arrow.png";
 import arrowDark from "../../assets/arrow-dark.png";
 import Button from "../../components/button/button.component";
-import LightDark from "../../components/light-dark.component.jsx/light-dark.component";
+import LightDark from "../../components/light-dark.component/light-dark.component";
 
 import "./results.styles.scss";
 
@@ -18,6 +18,7 @@ const Results = () => {
 
   const navigate = useNavigate();
   let airportCode;
+  // just to mimic some real data - airport code will change in every 5 minutes
   if (searchParams.destination === "London") {
     currentDate.getMinutes() % 5 === 0
       ? (airportCode = "LHR")
@@ -27,6 +28,8 @@ const Results = () => {
   } else {
     airportCode = "BER";
   }
+
+  // because I'm not dealing with real data that could be fetched from an API I just have this setup for 3 different "results" passing the searchparams wherever needed dynamically
   const flights = [
     {
       id: 1,
@@ -70,7 +73,7 @@ const Results = () => {
 
   const handleSelectFlight = (flight) => {
     setSelectedFlight(flight);
-
+    // we pass the data again to the next component - same pattern
     navigate("/more-options", { state: { selectedFlight: { ...flight } } });
   };
 
