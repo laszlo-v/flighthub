@@ -15,14 +15,22 @@ import "./header.styles.scss";
 const Header = () => {
   const { currentUser, setCurrentUser } = useContext(UserContext);
   // setting up state for the user's first name
-  const [firstName, setFirstName] = useState(null);
+  const [firstName, setFirstName] = useState(() => {
+    // getting the firstname from LS
+    const storedFirstName = localStorage.getItem("firstName");
+    return storedFirstName || null;
+  });
   // an async funtion to manage the google popup
+
   const logGoogleUser = async () => {
     const { user } = await signInWithGooglePopup();
     let firstName = user.displayName.split(" ")[0];
     // setting the current user to the display name - this will be used for Stripe as well
     setCurrentUser(user.displayName);
     setFirstName(firstName);
+
+    // saving the firstname in LS
+    localStorage.setItem("firstName", firstName);
     const userDocRef = await createUserDocument(user);
   };
   const { darkmode } = useContext(DarkmodeContext);
