@@ -100,7 +100,7 @@ const Confirmation = () => {
           </div>
 
           <div className="payment-right">
-            {/* <Formik
+            <Formik
               initialValues={{
                 fullName: "",
                 email: "",
@@ -219,8 +219,8 @@ const Confirmation = () => {
                   </Button>
                 </div>
               </Form>
-            </Formik> */}
-            <StripePaymentForm totalPrice={totalPrice} />
+            </Formik>
+            {/* <StripePaymentForm totalPrice={totalPrice} /> */}
           </div>
         </div>
       </div>
